@@ -10,6 +10,18 @@ This Docker image provides a ready-to-use instance of [MCPO](https://github.com/
 
 ---
 
+## 💡 Why this approach?
+
+When starting out, I found that the official Open WebUI documentation often highlights **one-liner launch commands** (e.g. using `npx` or `uvx` directly) and provides translations from **Claude configs** to one-liners.
+
+However, I noticed two things:
+- The **MCP server registry** (https://github.com/modelcontextprotocol/servers) nearly always gives the **Claude-style JSON configuration**, *not* the one-liners.
+- **MCPO**, when acting as a hub, **expects Claude configs** directly—there is no benefit in converting them to one-liners manually.
+
+So instead of manually translating JSON blocks to CLI commands, I embraced the Claude config format fully. This makes the setup clearer, easier to maintain, and perfectly compatible with `mcpo`.
+
+---
+
 ## 🚀 Quick Start (with Docker Hub)
 
 ### 1. Pull the image
