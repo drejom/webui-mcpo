@@ -1,0 +1,10 @@
+services:
+  mcpo:
+    build: .
+    image: webui-mcpo:v1.1
+    container_name: webui-mcpo
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./mcpo:/opt/mcpo
+    restart: unless-stopped
