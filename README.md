@@ -32,7 +32,8 @@ docker pull masterno12/webui-mcpo:latest
 
 ### 2. Create a `config.json`
 
-You must provide a `config.json` under `/opt/mcpo` inside the container. If the file does not exist, the container will automatically generate a minimal default one.
+You must provide a `config.json` in a local folder (e.g., `mcpo/`). If `mcpo/config.json` does not exist, the container will automatically generate a minimal default one.
+The local folder `mcpo/` must be in the same directory where docker-compose.yml is.
 
 📄 **Example `config.json`:**
 
