@@ -154,6 +154,23 @@ This ensures Open WebUI recognizes and communicates with each tool server correc
 - Container exposes port `8000`.
 - Supports `npx`, `uvx`, and custom MCP tool types.
 
+___
+
+## 📦 Changelog
+
+### v1.2 – Added API Key Support via ENV (2025-05-24)
+
+- ✅ Added support for API key injection via `MCPO_API_KEY` environment variable.
+- 🛠️ Updated `entrypoint.sh` to dynamically append `--api-key` if the variable is present.
+- 📁 Keeps using `config.json` for server configuration.
+- 📄 Improved documentation for Docker Compose usage.
+- 🧪 Backward-compatible with `v1.1` config files.
+
+### v1.1 – Initial Release
+
+- 🧠 Basic Docker image for `mcpo` with config file support.
+- 🚀 Lightweight and ready-to-use Open WebUI MCP server launcher.
+
 ---
 
 ## 🔗 Related Links

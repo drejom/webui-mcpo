@@ -1,10 +1,13 @@
 services:
   mcpo:
     build: .
-    image: webui-mcpo:v1.1
+    image: webui-mcpo:v1.2
     container_name: webui-mcpo
     ports:
       - "8000:8000"
     volumes:
       - ./mcpo:/opt/mcpo
+# Optional: define an API key if your MCPO config or clients require authentication.
+#    environment:
+#      - MCPO_API_KEY=top-secret
     restart: unless-stopped

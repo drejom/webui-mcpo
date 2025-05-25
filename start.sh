@@ -10,4 +10,11 @@ if [ ! -f "$CONFIG_PATH" ]; then
 fi
 
 echo "Lancement de mcpo avec : $CONFIG_PATH"
-exec mcpo --config "$CONFIG_PATH"
+
+# Ajoute --api-key si MCPO_API_KEY est défini
+if [ -n "$MCPO_API_KEY" ]; then
+    echo "Clé API détectée, ajout de --api-key"
+    exec mcpo --config "$CONFIG_PATH" --api-key "$MCPO_API_KEY"
+else
+    exec mcpo --config "$CONFIG_PATH"
+fi
