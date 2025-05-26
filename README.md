@@ -155,6 +155,65 @@ This ensures Open WebUI recognizes and communicates with each tool server correc
 - Container exposes port `8000`.
 - Supports `npx`, `uvx`, and custom MCP tool types.
 
+### n8n support
+
+The sse provide by n8n work when use with n8n
+
+
+```
+{
+  "mcpServers": {
+    "n8n": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "supergateway",
+        "--sse",
+        "<MCP_URL>"
+      ]
+    }
+  }
+}
+```
+
+With Authorization
+
+```
+{
+  "mcpServers": {
+    "n8n": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "supergateway",
+        "--sse",
+        "<MCP_URL>",
+        "--header",
+        "Authorization: Bearer <MCP_BEARER_TOKEN>"
+      ]
+    }
+  }
+}
+```
+#### But, mcpo should work with native sse (but not for me, i let it here if you want to try)
+
+```
+    "n8n-dev": {
+      "url": "<MCP_URL>",
+      "serverType": "sse"
+    }   
+```
+
+With Authorization
+
+```
+ "linux_server": {
+      "transport": "sse",
+      "endpoint": "http://192.168.40.173:8000/sse",
+      "bearertoken":"expected-token"
+    }
+```
+
 ___
 
 ## 📦 Changelog
