@@ -157,7 +157,7 @@ This ensures Open WebUI recognizes and communicates with each tool server correc
 
 ### n8n support
 
-The sse provide by n8n work when use with n8n
+The sse provide by n8n work when use with **supergateway**
 
 
 ```
