@@ -7,7 +7,6 @@ services:
       - "8000:8000"
     volumes:
       - ./mcpo:/opt/mcpo
-# Optional: define an API key if your MCPO config or clients require authentication.
-#    environment:
-#      - MCPO_API_KEY=top-secret
+    environment:
+      - MCPO_API_KEY=${MCPO_API_KEY}
     restart: unless-stopped
