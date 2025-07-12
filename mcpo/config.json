@@ -1,15 +1,8 @@
 {
     "mcpServers": {
         "github": {
-            "command": "npx",
-            "args": [
-                "-y",
-                "@modelcontextprotocol/server-github"
-            ],
-            "env": {
-                "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
-
-            }
+            "url": "https://api.githubcopilot.com/mcp/",
+            "authorization_token": "Bearer ${GITHUB_PERSONAL_ACCESS_TOKEN}"
         },
         "hass-mcp": {
             "command": "uvx",
