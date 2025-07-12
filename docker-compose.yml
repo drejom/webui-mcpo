@@ -2,7 +2,7 @@ services:
   mcpo:
     build: .
     #image: webui-mcpo:v1.2
-    container_name: webui-mcpo
+    #container_name: webui-mcpo
     ports:
       - "8000:8000"
     volumes:
