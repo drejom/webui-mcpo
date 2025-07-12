@@ -9,6 +9,7 @@ RUN apt-get update && \
         ca-certificates \
         nodejs \
         npm \
+        git \
     && apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
