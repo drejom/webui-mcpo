@@ -10,6 +10,7 @@ RUN apt-get update && \
         nodejs \
         npm \
         git \
+        docker.io \
     && apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 

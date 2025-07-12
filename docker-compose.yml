@@ -7,6 +7,7 @@ services:
       - "8000:8000"
     volumes:
       - ./mcpo:/opt/mcpo
+      - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - MCPO_API_KEY=${MCPO_API_KEY}
     restart: unless-stopped
