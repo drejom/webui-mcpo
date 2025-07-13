@@ -13,14 +13,18 @@
         },
 
         "hass-mcp": {
-            "command": "uvx",
+            "command": "docker",
             "args": [
-                "--from",
-                "git+https://github.com/drejom/hass-mcp",
-                "hass-mcp"
+                "run",
+                "-i",
+                "--rm",
+                "-e",
+                "HA_URL",
+                "-e",
+                "HA_TOKEN",
+                "voska/hass-mcp:latest"
             ]
         },
-
         "sequentialthinking": {
             "command": "npx",
             "args": [
