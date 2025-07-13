@@ -1,5 +1,12 @@
 {
     "mcpServers": {
+        "tailscale": {
+            "command": "npx",
+            "args": [
+                "--package=@hexsleeves/tailscale-mcp-server",
+                "tailscale-mcp-server"
+            ]
+        },
         "github": {
             "command": "docker",
             "args": [
