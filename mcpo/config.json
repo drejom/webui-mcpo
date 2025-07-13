@@ -47,14 +47,20 @@
             "args": [
                 "-y",
                 "firecrawl-mcp"
-            ]
+            ],
+            "env": {
+                "FIRECRAWL_API_URL": "http://100.71.91.12:3002"
+            }
         },
         "context7": {
             "command": "npx",
             "args": [
                 "-y",
                 "@upstash/context7-mcp"
-            ]
+            ],
+            "env": {
+                "DEFAULT_MINIMUM_TOKENS": "6000"
+            }
         }
     }
 }
