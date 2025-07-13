@@ -19,11 +19,14 @@
                 "-i",
                 "--rm",
                 "-e",
-                "HA_URL=${HA_URL}",
+                "HA_URL",
                 "-e",
                 "HA_TOKEN=${HA_TOKEN}",
                 "voska/hass-mcp:latest"
-            ]
+            ],
+            "env": {
+                "HA_URL": "http://192.168.1.20:8123"
+            }
         },
         "sequentialthinking": {
             "command": "npx",
