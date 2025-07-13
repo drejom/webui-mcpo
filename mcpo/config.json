@@ -22,7 +22,7 @@
                 "hass-mcp"
             ],
             "env": {
-                "HA_URL": "http://home.omeally.com",
+                "HA_URL": "http://192.168.1.20:8123",
                 "HA_TOKEN": "${HA_TOKEN}"
             }
         },
