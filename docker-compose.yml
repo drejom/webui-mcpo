@@ -8,9 +8,6 @@ services:
     volumes:
       - ./mcpo:/opt/mcpo
       - /var/run/docker.sock:/var/run/docker.sock
-    environment:
-      - MCPO_API_KEY=${MCPO_API_KEY}
-      - HA_TOKEN=${HA_TOKEN}
-      - HA_URL=${HA_URL}
-      - GITHUB_PERSONAL_ACCESS_TOKEN=${GITHUB_PERSONAL_ACCESS_TOKEN}
+    env_file:
+      - .env
     restart: unless-stopped
