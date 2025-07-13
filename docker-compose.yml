@@ -10,4 +10,6 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - MCPO_API_KEY=${MCPO_API_KEY}
+      - HA_TOKEN=${HA_TOKEN}
+      - GITHUB_PERSONAL_ACCESS_TOKEN=${GITHUB_PERSONAL_ACCESS_TOKEN}
     restart: unless-stopped
