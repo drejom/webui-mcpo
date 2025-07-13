@@ -7,7 +7,7 @@
                 "-i",
                 "--rm",
                 "-e",
-                "GITHUB_PERSONAL_ACCESS_TOKEN",
+                "GITHUB_PERSONAL_ACCESS_TOKEN=${GITHUB_PERSONAL_ACCESS_TOKEN}",
                 "ghcr.io/github/github-mcp-server"
             ]
         },
@@ -19,9 +19,9 @@
                 "-i",
                 "--rm",
                 "-e",
-                "HA_URL=http://192.168.1.20:8123",
+                "HA_URL=${HA_URL}",
                 "-e",
-                "HA_TOKEN",
+                "HA_TOKEN=${HA_TOKEN}",
                 "voska/hass-mcp:latest"
             ]
         },
