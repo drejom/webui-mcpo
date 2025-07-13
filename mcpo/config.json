@@ -28,7 +28,7 @@
             "command": "uvx",
             "args": [
                 "--from",
-                "git+https://github.com/drejom/hass-mcp",
+                "git+https://github.com/voska/hass-mcp",
                 "hass-mcp"
             ]
         },
