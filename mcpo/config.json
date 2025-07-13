@@ -7,20 +7,69 @@
                 "-i",
                 "--rm",
                 "-e",
-                "GITHUB_PERSONAL_ACCESS_TOKEN=${GITHUB_PERSONAL_ACCESS_TOKEN}",
+                "GITHUB_PERSONAL_ACCESS_TOKEN",
                 "ghcr.io/github/github-mcp-server"
             ]
         },
-
+        "mcp-searxng": {
+            "command": "docker",
+            "args": [
+                "run",
+                "-i",
+                "--rm",
+                "--network=host",
+                "-e",
+                "SEARXNG_ENGINE_API_BASE_URL=https://search.omeally.com/search",
+                "-e",
+                "DESIRED_TIMEZONE=America/Los_Angeles",
+                "-e",
+                "ODS_CONFIG_PATH=/config/ods_config.json",
+                "-e",
+                "RETURNED_SCRAPPED_PAGES_NO=3",
+                "-e",
+                "SCRAPPED_PAGES_NO=5",
+                "-e",
+                "PAGE_CONTENT_WORDS_LIMIT=5000",
+                "-e",
+                "CITATION_LINKS=True",
+                "-e",
+                "MAX_IMAGE_RESULTS=10",
+                "-e",
+                "MAX_VIDEO_RESULTS=10",
+                "-e",
+                "MAX_FILE_RESULTS=5",
+                "-e",
+                "MAX_MAP_RESULTS=5",
+                "-e",
+                "MAX_SOCIAL_RESULTS=5",
+                "-e",
+                "TRAFILATURA_TIMEOUT=15",
+                "-e",
+                "SCRAPING_TIMEOUT=20",
+                "-e",
+                "CACHE_MAXSIZE=100",
+                "-e",
+                "CACHE_TTL_MINUTES=5",
+                "-e",
+                "CACHE_MAX_AGE_MINUTES=30",
+                "-e",
+                "RATE_LIMIT_REQUESTS_PER_MINUTE=10",
+                "-e",
+                "RATE_LIMIT_TIMEOUT_SECONDS=60",
+                "-e",
+                "IGNORED_WEBSITES=",
+                "overtlids/mcp-searxng-enhanced:latest"
+            ],
+            "timeout": 60
+        },
         "hass-mcp": {
             "command": "uvx",
             "args": [
-            "--from",
-            "git+https://github.com/drejom/hass-mcp",
-            "hass-mcp"
+                "--from",
+                "git+https://github.com/drejom/hass-mcp",
+                "hass-mcp"
             ]
         },
-
         "sequentialthinking": {
             "command": "npx",
             "args": [
